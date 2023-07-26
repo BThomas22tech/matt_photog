@@ -214,3 +214,48 @@ header{
 .header_btn-md{
     display: none;
 }
+
+.header_frames{
+    position: absolute;
+    top: 88vh;
+    right: 44rem;
+    transition: var(--transition);
+}
+
+.header_frame{
+    width: 14rem;
+    border: 0.4rem solid var(--color-bg-3);
+    box-shadow: 0 0 4rem rgba(0,0,0,0.5) ;
+    position: absolute;
+    transform: rotate(-10deg);
+    transform-origin: bottom left;
+    transistion: var(--transition);
+
+}
+
+.header_frame:nth-child(2){
+    transform: rotate(20deg);
+    top: -2rem;
+    left: 2rem;
+}
+
+.header_frames:hover .header_frame{
+    transform: rotate(0);
+}
+
+.header_frames:hover .header_frame:nth-child(2){
+    top: 0;
+    left: 15rem;
+}
+
+/* general style for contact */
+.contact_btn{
+    color: var(--color-bg-1);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display:grid;
+    place-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
