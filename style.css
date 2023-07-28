@@ -229,7 +229,7 @@ header{
     position: absolute;
     transform: rotate(-10deg);
     transform-origin: bottom left;
-    transistion: var(--transition);
+    transition: var(--transition);
 
 }
 
