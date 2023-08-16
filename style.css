@@ -102,6 +102,7 @@ nav{
 }
 
 .nav_toggle-btn{
+    width: 3rem;
     display: none;
 }
 
@@ -137,14 +138,15 @@ header{
     position: relative;
     top: 0;
     background: linear-gradient(var(--color-bg-3),var(--color-bg-1));
-    /* overflow:hidden */
+    overflow:hidden
 
 }
+
 
 .header_container{
     display: grid;
     grid-template-columns: 41% 52%;
-    gap: 6%;
+    gap: 3%;
     margin-top: 10rem;
     position: relative;
 
@@ -464,7 +466,7 @@ about_right p{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 5rem;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .exhibitions_gallery article{
@@ -534,8 +536,12 @@ footer{
 }
 
 /* MEDIA Queries medium screens */
-
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width:1025px){
+    .nav_toggle-btn{
+        display: none;
+    }
+}
+@media only screen  and (max-width: 1024px) {
     .container{
         width: var(--container-width-md);
         position: relative;
@@ -577,10 +583,103 @@ footer{
         font-size: 2rem;
         background: transparent;
         cursor: pointer;
-        color: var(--color-white);
+        /* color: var(--color-white); */
     }
     #nav_toggle-close{
         display: none;
+    }
+    /* Header */
+    header{
+        height: fit-content;
+        padding: 14rem 0 12rem;
+        display: grid;
+        place-items: center;
+    }
+    .header_image-bg, .header_image-sm{
+        display: none;
+
+    }
+    .header_container{
+        grid-template-columns: 40% 54%;
+        gap: 6%;
+        margin: 0;
+    }
+    .header_image-lg{
+        filter: saturate(1) brightness(1);
+        border: 1rem solid var(--color-bg-2);
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .header_tag{
+        margin-bottom: 1rem;
+    }
+    .empty{
+        display: none;
+    }
+    .header_right p{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    .header_frames, .contact_btn {
+        display: none;
+    }
+    .header_btn-md{
+        background: linear-gradient(135deg, var(--color-primary-variant), var(--color-primary));
+        color: var(--color-bg-1);
+        margin-top: 2rem;
+        display: inline-block;
+        padding: 0.6rem 1.6rem;
+        font-weight: 600;
+        border-radius: 0.3rem;
+    }
+    .header_btn-md:hover {
+        color: var(--color-white);
+    }
+    /* About */
+    .about_container{
+        grid-template-columns: 40% 54%;
+        gap: 6%;
+    }
+    .about_image-bg, .about_image-sm{
+        display: none;
+    }
+    .about_image-lg{
+        left: 0;
+        top: 0;
+        filter: saturate(1) brightness(1);
+    }
+    .about_image:hover .about_image-lg{
+        border: none;
+    }
+    .about_right{
+        margin: 0;
+    }
+    .about_right p{
+        margin-bottom: 1rem;
+    }
+    /* Gallery */
+    #gallery{
+        margin-top: 8rem;
+    }
+    .gallery_container p{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .swiper-wrapper{
+        margin-top: 4rem;
+        height: fit-content;
+    }
+    /* exhibitions */
+    .exhibitions_head >p{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .exhibition_gallery{
+        margin-top: 3rem;
+    }
+    .exhibitions_gallery article{
+        border: none;
     }
 }
 /* hamburger not disappearing for larger screen stays white, header not responsive*/
