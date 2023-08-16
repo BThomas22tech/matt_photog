@@ -565,7 +565,7 @@ footer{
     .nav_links{
         position: absolute;
         top: 100%;
-        background: red;
+        
         right: 0;
         flex-direction: column;
         gap: 0;
@@ -688,7 +688,17 @@ footer{
     .exhibitions_gallery article{
         border: none;
     }
-
+    .nav_links li{
+        transform: rotate(-90deg) rotateY(90deg);
+        transform-origin: top right;
+        animation: animation1 1s ease forwards;
+        
+    }
+    @keyframes animation1 {
+        to{
+            transform: rotate(0);
+        }
+    }
 }
 
 @media only screen  and (max-width: 600px) {
